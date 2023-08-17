@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        // o grid aceita a função minmax que deixa mais responsivo o layout
+        app: 'minmax(18rem, 20rem) 1fr',
+      },
     },
   },
   plugins: [],
