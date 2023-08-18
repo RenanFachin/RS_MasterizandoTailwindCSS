@@ -1,9 +1,14 @@
+'use client'
 import { UploadCloud } from 'lucide-react'
+import { useFileInput } from './Root'
 
 export function Trigger() {
+  // capturando as informações do contexto
+  const { id } = useFileInput()
+
   return (
     <label
-      htmlFor="photo"
+      htmlFor={id}
       // group para habilitar a estilização de componentes filhos qnd passado o mouse no pai
       className="hover:bg-violet-25 group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-violet-200 hover:text-violet-500"
     >

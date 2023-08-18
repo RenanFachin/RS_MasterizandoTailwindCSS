@@ -164,7 +164,11 @@ export default function Home() {
               </span>
             </label>
 
-            <div></div>
+            <FileInput.Root>
+              <FileInput.Trigger />
+              {/* multiple faz aceitar múltiplos envios */}
+              <FileInput.Control multiple />
+            </FileInput.Root>
           </div>
 
           <div className="pt-5' flex items-center justify-end gap-2">
