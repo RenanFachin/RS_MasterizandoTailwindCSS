@@ -3,8 +3,10 @@ import * as FileInput from './components/FileInput'
 
 import { SettingTabs } from './components/SettingsTabs'
 
-import { Mail } from 'lucide-react'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { SelectInput } from './components/SelectInput'
+import { SelectItem } from './components/SelectInput/SelectItem'
+import { Textarea } from './components/Textarea'
 
 export default function Home() {
   return (
@@ -127,7 +129,9 @@ export default function Home() {
               Country
             </label>
 
-            <SelectInput />
+            <SelectInput placeholder="Select a country...">
+              <SelectItem value="br" text="Brazil" />
+            </SelectInput>
           </div>
 
           {/* Timezone - select */}
@@ -139,7 +143,14 @@ export default function Home() {
               Timezone
             </label>
 
-            <div></div>
+            <SelectInput placeholder="Select a timezone...">
+              <SelectItem
+                value="utc8"
+                text="Pacific Standard Time (PST) (UTC−08:00)"
+              />
+
+              <SelectItem value="utc3" text="America São Paulo (UTC−03:00)" />
+            </SelectInput>
           </div>
 
           {/* bio - textarea + */}
@@ -151,7 +162,56 @@ export default function Home() {
               </span>
             </label>
 
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <SelectInput placeholder="" defaultValue="normal">
+                  <SelectItem value="normal" text="Normal Text" />
+                  <SelectItem value="md" text="markdown" />
+                </SelectInput>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Bold className="h-4 w-4 text-zinc-500" />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Italic className="h-4 w-4 text-zinc-500" />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Link className="h-4 w-4 text-zinc-500" />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <List className="h-4 w-4 text-zinc-500" />
+                  </button>
+
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <ListOrdered className="h-4 w-4 text-zinc-500" />
+                  </button>
+                </div>
+              </div>
+
+              <Textarea
+                id="bio"
+                defaultValue="I'm a Product Designer based in Melbourne, Australia. I specialise in UX/UI design, brand strategy, and Webflow development."
+              />
+            </div>
           </div>
 
           {/* portfolio - upload + */}
