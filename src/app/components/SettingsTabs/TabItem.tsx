@@ -19,9 +19,11 @@ export function TabItem({ value, title, isSelected = false }: TabItemProps) {
     <Tabs.Trigger
       // Value é um parâmetro obrigatório do radix, ele relaciona o botão com o conteúdo
       value={value}
-      className="relative px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700"
+      className="group relative px-1 pb-4 text-sm font-medium text-zinc-500 outline-none hover:text-violet-700 data-[state=active]:text-violet-700"
     >
-      <span>{title}</span>
+      <span className="rounded group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-2">
+        {title}
+      </span>
 
       {/* Para quando a tab estiver selecionada */}
       {isSelected && (
