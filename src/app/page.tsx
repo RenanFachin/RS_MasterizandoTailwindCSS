@@ -25,15 +25,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
+            </Button>
 
             {/* Este botão do tipo submit vai fazer o envio do formulário, mas como ele não está dentro do form é necessário colocar um ID no form e uma form para o button */}
-            <Button type="submit" form="settings">
+            <Button type="submit" form="settings" variant="primary">
               Save
             </Button>
           </div>
@@ -231,21 +228,15 @@ export default function Home() {
             </FileInput.Root>
           </div>
 
-          <div className="pt-5' flex items-center justify-end gap-2">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+          <div className="flex items-center justify-end gap-2 pt-5">
+            <Button type="button" variant="outline">
               Cancel
-            </button>
+            </Button>
 
-            {/* Como o botão está dentro do formulário não é necessário definir a prop form="settings" */}
-            <button
-              type="submit"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-800"
-            >
+            {/* Este botão do tipo submit vai fazer o envio do formulário, mas como ele não está dentro do form é necessário colocar um ID no form e uma form para o button */}
+            <Button type="submit" form="settings" variant="primary">
               Save
-            </button>
+            </Button>
           </div>
         </form>
       </div>
