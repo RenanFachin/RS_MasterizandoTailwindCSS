@@ -2,7 +2,7 @@ import { Input } from './components/Input'
 import * as FileInput from './components/FileInput'
 import { SettingTabs } from './components/SettingsTabs'
 
-import { Mail, UploadCloud, User } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -166,6 +166,7 @@ export default function Home() {
 
             <FileInput.Root>
               <FileInput.Trigger />
+              <FileInput.FileList />
               {/* multiple faz aceitar múltiplos envios */}
               <FileInput.Control multiple />
             </FileInput.Root>
