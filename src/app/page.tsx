@@ -7,6 +7,7 @@ import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { SelectInput } from './components/SelectInput'
 import { SelectItem } from './components/SelectInput/SelectItem'
 import { Textarea } from './components/Textarea'
+import { Button } from './components/Button'
 
 export default function Home() {
   return (
@@ -32,13 +33,9 @@ export default function Home() {
             </button>
 
             {/* Este botão do tipo submit vai fazer o envio do formulário, mas como ele não está dentro do form é necessário colocar um ID no form e uma form para o button */}
-            <button
-              type="submit"
-              form="settings"
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-800"
-            >
+            <Button type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </div>
 
