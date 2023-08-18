@@ -29,7 +29,7 @@ export function SelectInput({
           position="popper"
           sideOffset={10}
           // w-[--radix-select-trigger-width] faz com que a width seja exatamente do tamanho do trigger, ou seja, do input
-          className="z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-300 bg-white shadow-sm"
+          className="animate-slideDownAndFade z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-300 bg-white shadow-sm"
         >
           <Select.Viewport>
             {/* data-[highlighted]:bg-zinc-50 é um data attribute do componente do radix para mostrar qual item o usuário está fazendo um hover */}
