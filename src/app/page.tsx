@@ -1,8 +1,10 @@
 import { Input } from './components/Input'
 import * as FileInput from './components/FileInput'
+
 import { SettingTabs } from './components/SettingsTabs'
 
 import { Mail } from 'lucide-react'
+import { SelectInput } from './components/SelectInput'
 
 export default function Home() {
   return (
@@ -125,7 +127,7 @@ export default function Home() {
               Country
             </label>
 
-            <div></div>
+            <SelectInput />
           </div>
 
           {/* Timezone - select */}
