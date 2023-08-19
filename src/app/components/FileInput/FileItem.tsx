@@ -36,6 +36,7 @@ export interface FileItemProps extends VariantProps<typeof fileItem> {
   name: string
   size: number
   type?: string
+  state: 'progress' | 'complete' | 'error'
 }
 
 export function FileItem({ name, size, type, state }: FileItemProps) {

@@ -1,3 +1,4 @@
+'use client'
 import { Input } from './components/Input'
 import * as FileInput from './components/FileInput'
 
@@ -8,8 +9,11 @@ import { SelectInput } from './components/SelectInput'
 import { SelectItem } from './components/SelectInput/SelectItem'
 import { Textarea } from './components/Textarea'
 import { Button } from './components/Button'
+import { useFileStatus } from './hooks/useFileStatus'
 
 export default function Home() {
+  const { handleChangeStatus } = useFileStatus()
+
   return (
     <>
       <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
@@ -221,6 +225,15 @@ export default function Home() {
             {/* Este botão do tipo submit vai fazer o envio do formulário, mas como ele não está dentro do form é necessário colocar um ID no form e uma form para o button */}
             <Button type="submit" form="settings" variant="primary">
               Save
+            </Button>
+
+            <Button
+              type="button"
+              form="settings"
+              variant="ghost"
+              onClick={() => handleChangeStatus()}
+            >
+              change progress status
             </Button>
           </div>
         </form>
