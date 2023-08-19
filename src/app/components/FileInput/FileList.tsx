@@ -10,6 +10,10 @@ export function FileList() {
   const { files } = useFileInput()
   const [parent] = useAutoAnimate()
 
+  if (files.length === 0) {
+    return null
+  }
+
   console.log(status)
 
   return (

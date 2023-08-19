@@ -230,10 +230,10 @@ export default function Home() {
             <Button
               type="button"
               form="settings"
-              variant="ghost"
+              variant="testCustomVariant"
               onClick={() => handleChangeStatus()}
             >
-              change progress status
+              Change progress status
             </Button>
           </div>
         </form>
