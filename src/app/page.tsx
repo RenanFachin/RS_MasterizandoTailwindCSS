@@ -11,8 +11,16 @@ import { Textarea } from './components/Textarea'
 import { Button } from './components/Button'
 import { useFileStatus } from './hooks/useFileStatus'
 
+import { useTheme } from 'next-themes'
+
 export default function Home() {
   const { handleChangeStatus } = useFileStatus()
+
+  const { theme, setTheme } = useTheme()
+
+  function handleChangeTheme() {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
     <>
@@ -253,6 +261,15 @@ export default function Home() {
               onClick={() => handleChangeStatus()}
             >
               Change progress status
+            </Button>
+
+            <Button
+              type="button"
+              form="settings"
+              variant="ghost"
+              onClick={() => handleChangeTheme()}
+            >
+              Change Theme
             </Button>
           </div>
         </form>
